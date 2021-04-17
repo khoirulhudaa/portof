@@ -201,9 +201,9 @@
   <section class="sec3">
     <div class="sec3-dek1"> </div>
     <div class="sec3-dek2"> </div>
-    <h1><img src="./images/va3.png" class="valclass-logo" alt="">Framework <span class="css">UI & JS |</span> Valclass</h1>
+    <h1><img src="./images/va3.png" class="valclass-logo" alt="">Framework <span class="css">UI |</span> Valclass</h1>
     <p>
-      Valclass merupakan framework css yang saya buat sendiri dengan bahasa pemrograman Vanilla Javascript. Valclass
+      Valclass merupakan framework UI yang saya buat sendiri dengan bahasa pemrograman Vanilla Javascript. Valclass
       rilis pada 19 February 2021. Ada berbagai fitur yang disediakan oleh valclass 
       seperti : v-office, v-increment, v-reload dan berbagai fitur lainnya yang akan 
       mempercepat serta mempermudah dalam meciptakan suatu tampilan sekaligus fitur 
@@ -267,16 +267,19 @@
       melakukan slicing pada sebuah desain. Undangan.com pada dasaranya didirikan oleh 4 programmer.
       Sedangkan saya adalah programmer termudah saat itu (pelajar kelas 12)
     </p>
-    <a href="https://towedd.com/"><button class="btn-valclass"><span class="kunjungi">Kunjungi</span> Undangan.com <i class="las la-arrow-left"></i></button></a>
+      <a href="https://towedd.com/"><button class="btn-valclass"><span class="kunjungi">Kunjungi</span> towedd.com <i class="las la-arrow-left"></i></button></a>
+        <br>
+      <a href="https://undangan-towedd-1.vercel.app/" target="_blank"><button class="btn-valclass"><span class="kunjungi">Contoh</span> desain <i class="las la-arrow-left"></i></button></a>
   </section>
   <!-- end section 5 -->
 
   <!-- section 6 -->
   <section class="sec6">
-    <div class="sertif">
-      <i class="las la-times" id="closeSertif"></i>
+    <div class="sertif sertifs1">
       <div class="sertif1"></div>
-      <div class="sectif2"></div>
+    </div>
+    <div class="sertif sertifs2">
+      <div class="sertif2"></div>
     </div>
     <div class="wrap-sec6">
       <div class="sec6-title">  
@@ -289,15 +292,15 @@
       </div>
       <div class="sec6-content">
         <div class="sec6-card sec6-card1">
-          <h2>FKOMFEST-2019</h2>
-          <small>Ciayumajakuning</small>
-          <span class="pos">4<sup>th</sup></span>
-          <button class="btn-sertif btn-sertif1">Lihat <i class="las la-arrow-left"></i></button>
-        </div>
-        <div class="sec6-card sec6-card2">
           <h2>INTECH-2020</h2>
           <small>Nasional</small>
           <span class="pos">19<sup>th</sup></span>
+          <button class="btn-sertif btn-sertif1">Lihat <i class="las la-arrow-left"></i></button>
+        </div>
+        <div class="sec6-card sec6-card2">
+          <h2>FKOMFEST-2019</h2>
+          <small>Ciayumajakuning</small>
+          <span class="pos">4<sup>th</sup></span>
           <button class="btn-sertif btn-sertif2">Lihat <i class="las la-arrow-left"></i></button>
         </div>
       </div>
@@ -332,9 +335,12 @@
               <img src="./images/va3.png">
             </a>
           </div>
+          <br>           
             <div>
+                <a href="https://towedd.com/" class="valclass-footer" target="_blank">
+                  <img src="./images/towedd.png">
+                </a> 
                 <a href="https://web.facebook.com/profile.php?id=100019386025874" target="_blank"></a><i class="lab la-facebook fb"></i>
-                <a href="https://www.instagram.com/mkhwdc/" target="_blank"></a><i class="lab la-instagram ig"></i>
                 <a href="https://api.whatsapp.com/send?phone=+6289513093406&text=Halo" target="_blank"></a><i class="lab la-whatsapp yt"></i>
             </div>
         </div>
@@ -379,6 +385,11 @@
   <script src="./vanilla-tilt.js"></script>
   <script>
     VanillaTilt.init(document.querySelectorAll(".sertif1"), {
+      max: 25,
+      speed: 400
+    });
+
+    VanillaTilt.init(document.querySelectorAll(".sertif2"), {
       max: 25,
       speed: 400
     });
@@ -449,20 +460,24 @@
     }
 
     
+    document.querySelector('.btn-sertif1').addEventListener('click', () => {
+      document.querySelector('.sertifs1').classList.add('sertifs1Show')                                                                                 
+      document.querySelector('.sertif2').classList.add('sertifShow2');                                                                                 
+    })
+
     document.querySelector('.btn-sertif2').addEventListener('click', () => {
-      document.querySelector('.sertif').classList.add('sertifShow')
+      document.querySelector('.sertifs2').classList.add('sertifs2Show') 
       document.querySelector('.sertif1').classList.add('sertifShow1')
     })
-    
-    document.querySelector('.btn-sertif1').addEventListener('click', () => {
-      document.querySelector('.sertif').classList.add('sertifShow')
-      document.querySelector('.sertif2').classList.add('sertifShow2')
-    })
-    
-    document.querySelector('.sertif').addEventListener('click', () => {
-      document.querySelector('.sertif').classList.remove('sertifShow')
-      document.querySelector('.sertif1').classList.remove('sertifShow1')
-    })
+
+    for(var i=0;i <= 2; i++) {
+      document.querySelectorAll('.sertif')[i].addEventListener('click', () => {
+        document.querySelector('.sertifs1').classList.remove('sertifs1Show')
+        document.querySelector('.sertifs2').classList.remove('sertifs2Show')
+        document.querySelector('.sertif1').classList.remove('sertifShow1')
+        document.querySelector('.sertif2').classList.remove('sertifShow2')
+      })
+    }
   </script>
 </body>
 
