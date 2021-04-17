@@ -1357,7 +1357,7 @@ section {
 }
 
 .sec1 {
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -2527,6 +2527,7 @@ section {
     
     .sec1-images {
         width: 70vw;
+        height: max-content;
         display: flex;
         justify-content: center;
         align-items: center;
