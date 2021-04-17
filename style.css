@@ -839,8 +839,9 @@ section {
 
 .sec5 {
     position: relative;
-    padding-top: 70px;
-    height: 100vh;
+    padding-top: 45px;
+    padding-bottom: 110px;
+    height: max-content;
 }
 
 .sec5-dek1 {
@@ -921,7 +922,19 @@ section {
     align-items: center;
 }
 
-.sertif {
+.sertifs1 {
+    position: absolute;
+    margin-top: -140px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sertifs2 {
     position: absolute;
     margin-top: -140px;
     width: 100vw;
@@ -943,7 +956,12 @@ section {
     z-index: 222;
 }
 
-.sertifShow {
+.sertifs1Show {
+    opacity: 1;
+    z-index: 222;
+}
+
+.sertifs2Show {
     opacity: 1;
     z-index: 222;
 }
@@ -955,6 +973,18 @@ section {
     opacity: 1;
     border-radius: 10px;
     background-image: url('./images/Screenshot (971) 1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sertif2 {
+    position: relative;
+    width: 75vw;
+    height: 80vh;
+    opacity: 1;
+    border-radius: 10px;
+    background-image: url('./images/sertif2.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1117,7 +1147,7 @@ section {
     font-weight: bolder;
     z-index: 2;
     font-weight: bold;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: 140px;
 }
 
@@ -1315,14 +1345,14 @@ section {
     height: 100vh;
     opacity: 1;
     border-radius: 10px;
-    background-image: url('./images/sertif1.png');
+    background-image: url('./images/Screenshot (971) 1.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .sertif:hover {
-    transform: scale(1.3);
+    transform: scale(1.05);
     transition: 0.4s;
 }
 
@@ -1960,7 +1990,7 @@ section {
     position: relative;
     padding-top: 0px;
     padding-bottom: 100px;
-    height: 125vh;
+    height: max-content;
 }
 
 .sec5-dek1 {
